@@ -124,7 +124,7 @@ src/
 
 - A standalone editor component (used if inline editing is needed).
 
----
+-----
 
 ## Additional Features
 
