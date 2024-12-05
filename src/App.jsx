@@ -46,8 +46,8 @@ function App() {
     setIsModalOpen(false);
   };
 
-  const handleNewTemplate = ({ title, subjective, pexam, adding }) => {
-    if (adding) {
+  const handleNewTemplate = ({ title, subjective, pexam, selectedTemplate }) => {
+    if (!selectedTemplate) {
       const newTemplate = {
         id: Date.now(),
         title,
@@ -57,7 +57,7 @@ function App() {
       saveTemplates([newTemplate, ...templates]);
       setSelectedTemplate(newTemplate);
     } else {
-      handleEditTemplate({ id: selectedTemplate.id, title, subjective, pexam });
+      handleEditTemplate({ id: selectedTemplate?.id, title, subjective, pexam });
     }
     setIsModalOpen(false);
   };
